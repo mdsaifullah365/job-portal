@@ -7,11 +7,11 @@ const userSchema = mongoose.Schema(
   {
     email: {
       type: String,
-      validate: [validator.isEmail, 'Provide a valid Email'],
+      required: [true, 'Email address is required'],
       trim: true,
       lowercase: true,
       unique: [true, 'Already have an account with this Email'],
-      required: [true, 'Email address is required'],
+      validate: [validator.isEmail, 'Provide a valid Email'],
     },
     password: {
       type: String,
@@ -38,7 +38,6 @@ const userSchema = mongoose.Schema(
         message: "Passwords don't match!",
       },
     },
-
     role: {
       type: String,
       enum: {
@@ -47,7 +46,6 @@ const userSchema = mongoose.Schema(
       },
       default: 'candidate',
     },
-
     firstName: {
       type: String,
       required: [true, 'Please provide a first name'],
@@ -104,6 +102,11 @@ userSchema.pre('save', function (next) {
 
   next();
 });
+
+userSchema.methods.comparePassword = function (password, hash) {
+  const isPasswordValid = bcrypt.compareSync(password, hash);
+  return isPasswordValid;
+};
 
 const User = mongoose.model('User', userSchema);
 
