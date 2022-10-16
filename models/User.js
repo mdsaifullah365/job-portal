@@ -41,7 +41,7 @@ const userSchema = mongoose.Schema(
     role: {
       type: String,
       enum: {
-        values: ['candidate', 'hr', 'admin'],
+        values: ['candidate', 'hiring-manager', 'admin'],
         message: "Role can't be {VALUE}",
       },
       default: 'candidate',
@@ -67,12 +67,10 @@ const userSchema = mongoose.Schema(
         message: 'Please provide a valid contact number',
       },
     },
-
     imageURL: {
       type: String,
       validate: [validator.isURL, 'Please provide a valid url'],
     },
-
     appliedJobs: [
       {
         type: ObjectId,
