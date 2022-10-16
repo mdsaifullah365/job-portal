@@ -67,7 +67,7 @@ const jobSchema = mongoose.Schema(
       },
       lastName: {
         type: String,
-        required: [true, 'Please provide a first name'],
+        required: [true, 'Please provide a last name'],
         trim: true,
         minLength: [3, 'Name must be at least 3 characters.'],
         maxLength: [20, 'Name is too large'],

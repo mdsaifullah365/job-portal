@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Frontend Developer",
+    "description": "We are looking for react developers who are curious and passionate about programming. You are happy to take your own initiatives and are easy to collaborate with. Furthermore, you are driven, and you never hesitate to ask for help when you need it. The team today is characterized by an open-minded atmosphere where everyone is welcome.",
+    "deadline": "2022-10-20T17:14:20.713Z",
+    "companyName": "Paf - Games Sport Casino",
+    "jobType": "full-time",
+    "position": "React developer",
+    "salary": 30000,
+    "location": "Sweden"
+  },
+  {
+    "title": "React Js & React Native Developer",
+    "description": "We are looking to hire a skilled React and React Native developer to join our growing company. You will work as part of a team to design and develop high-quality software solutions for web applications and mobile apps using React. As a React.js developer, you will implement new features and maintain existing code using React and other standard tools in the React ecosystem, such as Node.js and Yarn. Your duties will include designing software solutions to meet project requirements, maintaining and refactoring existing code, writing tests, and fixing bugs.",
+    "deadline": "2022-10-17T17:14:20.713Z",
+    "companyName": "Make Real",
+    "jobType": "part-time",
+    "position": "Fronend developer",
+    "salary": 40000,
+    "location": "Dhaka"
+  },
+  {
+    "title": "Junior Front-End Developer Job",
+    "description": "A fast-growing company that enables lawyers to use proprietary software and data to create quick and cost-effective legal notices is looking for a Junior Front-End Developer. The selected candidate will be tasked with developing easily scalable, responsive, and detailed front-end features. The US-based company is leveraging the power of ML to assist personal injury plaintiffs and their attorneys in obtaining better results in their cases. This is a nice job for developers who are eager to work with a talented team of industry veterans.",
+    "deadline": "2022-10-18T17:14:20.713Z",
+    "companyName": "Brain Station 23",
+    "jobType": "internship",
+    "position": "Frontend developer",
+    "salary": 10000,
+    "location": "Dhaka"
+  }
+]

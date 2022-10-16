@@ -8,7 +8,9 @@ app.use(cors());
 
 //routes
 const userRoute = require('./routes/v1/user.route');
+const jobRoute = require('./routes/v1/job.route');
 
 app.use('/api/v1/user', userRoute);
+app.use('/api/v1/jobs', jobRoute);
 
 module.exports = app;
