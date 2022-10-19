@@ -28,5 +28,25 @@
     "position": "Frontend developer",
     "salary": 10000,
     "location": "Dhaka"
+  },
+  {
+    "title": "Frontend Engineer",
+    "description": "Markovate is a product development company based out of Canada and Gurugram, India. We work with venture-backed and high-value startups and specialise in digital transformation and product development.",
+    "deadline": "2022-10-17T11:43:39.713Z",
+    "companyName": "Markovate",
+    "jobType": "internship",
+    "position": "Frontend Engineer",
+    "salary": 30000,
+    "location": "India"
+  },
+  {
+    "title": "Full-stack Engineer",
+    "description": "At Car Next Door, we’re on a mission to free the world from the ‘one person, one car’ mentality. Our platform and technology make it easy to turn any car into a shared car, empowering people to save money, reduce waste and fight climate change. Since 2012, we’ve grown our community to more than 8,000 cars being shared with over 250,000 members achieving impressive growth every year. Our recent acquisition by Uber has created an amazing opportunity for us to combine our car-sharing community with Uber’s mobility platform, providing a complete alternative to car",
+    "deadline": "2022-10-20T11:43:39.713Z",
+    "companyName": "Car next door",
+    "jobType": "part",
+    "position": "Fullstack Engineer",
+    "salary": 55000,
+    "location": "USA"
   }
 ]

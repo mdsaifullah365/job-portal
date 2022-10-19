@@ -14,10 +14,8 @@ const applicationSchema = mongoose.Schema(
       ref: 'User',
       required: true,
     },
-    resume: {
-      type: String,
-      validate: [validator.isURL, 'Please provide a valid resume url'],
-    },
+    managerId: { type: ObjectId, ref: 'User', required: true },
+    resume: String,
     coverLetter: {
       type: String,
       trim: true,
