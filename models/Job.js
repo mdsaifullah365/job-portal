@@ -79,18 +79,8 @@ const jobSchema = mongoose.Schema(
     },
     applications: [
       {
-        id: {
-          type: ObjectId,
-          ref: 'Application',
-        },
-        candidateId: {
-          type: ObjectId,
-          ref: 'User',
-        },
-        resume: {
-          type: String,
-          validate: [validator.isURL, 'Please provide a valid url'],
-        },
+        type: ObjectId,
+        ref: 'Application',
       },
     ],
   },

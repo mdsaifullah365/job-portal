@@ -221,14 +221,22 @@ module.exports.applyJob = async (req, res) => {
       });
     }
 
-    // Get the application info from the body
-    const applicationInfo = req.body;
+    // Get the candidate info
+    const candidateInfo = await findUserByIdService(candidateId);
+    const { firstName, lastName, contactNumber, imageURL } = candidateInfo;
 
-    // Add jobId, candidateId and the managerId to the applicationInfo
-    applicationInfo.jobId = jobId;
-    applicationInfo.candidateId = candidateId;
-    applicationInfo.managerId = job?.manager?.id;
-    applicationInfo.resume = req.files[0].path;
+    // Make application info
+    const applicationInfo = {
+      ...req.body,
+      jobId,
+      managerId: job?.manager?.id,
+      resume: req.files[0].path,
+      candidateId,
+      firstName,
+      lastName,
+      contactNumber,
+      imageURL,
+    };
 
     // Apply/Save the job
     const application = await applyJobService(applicationInfo);
@@ -252,7 +260,7 @@ module.exports.applyJob = async (req, res) => {
 
     res.status(400).json({
       status: 'success',
-      message: 'Successfully created the job',
+      message: 'Successfully applied the job',
     });
   } catch (error) {
     res.status(400).json({
