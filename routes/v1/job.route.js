@@ -7,12 +7,22 @@ const verifyToken = require('../../middleware/verifyToken');
 const router = express.Router();
 
 router
-  .route('/')
+  .route('/jobs')
   .get(jobController.getJobs)
   .post(verifyToken, authorize('hiring-manager'), jobController.createJob);
 
 router
-  .route('/:id/apply')
+  .route('/jobs/:id')
+  .get(validateId, jobController.getJobById)
+  .patch(
+    verifyToken,
+    authorize('hiring-manager'),
+    validateId,
+    jobController.updateJobById
+  );
+
+router
+  .route('/jobs/:id/apply')
   .post(
     verifyToken,
     authorize('candidate'),
@@ -21,13 +31,16 @@ router
   );
 
 router
-  .route('/:id')
-  .get(validateId, jobController.getJobById)
-  .patch(
+  .route('/manager/jobs')
+  .get(verifyToken, authorize('hiring-manager'), jobController.getManagerJobs);
+
+router
+  .route('/manager/jobs/:id')
+  .get(
     verifyToken,
     authorize('hiring-manager'),
     validateId,
-    jobController.updateJobById
+    jobController.getManagerJobById
   );
 
 module.exports = router;
