@@ -71,19 +71,6 @@ const userSchema = mongoose.Schema(
       type: String,
       validate: [validator.isURL, 'Please provide a valid url'],
     },
-    appliedJobs: [
-      {
-        type: ObjectId,
-        ref: 'Job',
-      },
-    ],
-
-    postedJobs: [
-      {
-        type: ObjectId,
-        ref: 'Job',
-      },
-    ],
   },
   {
     timestamps: true,

@@ -43,5 +43,5 @@ module.exports.getManagerJobsService = async (managerId) => {
 };
 
 module.exports.getManagerJobByIdService = async (id) => {
-  return await Job.findById(id).populate('applications');
+  return await Job.findById(id);
 };
